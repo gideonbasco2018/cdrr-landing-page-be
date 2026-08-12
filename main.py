@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from app.api.routes import auth
+from app.api.routes import auth, applications
 from app.core.config import settings
 
 app = FastAPI(title="SSO Login API")
@@ -18,6 +18,7 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(auth.router, prefix="/api")
+app.include_router(applications.router, prefix="/api")
 
 
 @app.get("/health")

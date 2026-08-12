@@ -16,11 +16,11 @@ class Settings(BaseSettings):
     GOOGLE_REDIRECT_URI: str
 
     # Frontend
-    FRONTEND_BASE_URL: str = "http://localhost:5173"
+    FRONTEND_BASE_URL: str = "http://localhost:5174"
     FRONTEND_AUTH_SUCCESS_PATH: str = "/auth/success"
 
     # CORS - comma separated string of origins
-    CORS_ORIGINS: str = "http://localhost:5173"
+    CORS_ORIGINS: str = "http://localhost:5174"
 
     SMTP_HOST: str = "smtp.gmail.com"
     SMTP_PORT: int = 587
