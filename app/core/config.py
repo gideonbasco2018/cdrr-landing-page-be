@@ -22,6 +22,8 @@ class Settings(BaseSettings):
     # CORS - comma separated string of origins
     CORS_ORIGINS: str = "http://localhost:5174"
 
+    EXTERNAL_SYSTEM_TOKEN: str
+
     SMTP_HOST: str = "smtp.gmail.com"
     SMTP_PORT: int = 587
     SMTP_USERNAME: str
